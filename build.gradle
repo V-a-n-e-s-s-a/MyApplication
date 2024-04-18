@@ -1,0 +1,47 @@
+//// Top-level build file where you can add configuration options common to all sub-projects/modules.
+
+buildscript {
+    dependencies {
+        classpath("com.android.tools.build:gradle:8.3.1") // Use the latest gradle version here
+
+        // enable SafeArgs for Task 9 Step 5
+        //val nav_version = "2.3.0-alpha04"
+        classpath("androidx.navigation:navigation-safe-args-gradle-plugin:2.3.0-alpha04")
+
+        // Add this line for Safe Args plugin
+//        classpath("androidx.navigation:navigation-safe-args-gradle-plugin:2.7.7")
+
+
+    }
+}
+
+plugins {
+//alias(libs.plugins.androidApplication) apply false
+    id("androidx.navigation.safeargs.kotlin") version "2.7.7" apply false
+    //id("com.google.gms.google-services") version "4.3.15" apply false
+
+    //*********** Exercise 11 *************
+    // Add the dependency for the Google services Gradle plugin
+    // from Firebase settings > see SDK instructions > Add Firebase SDK
+    id 'com.google.gms.google-services' version '4.4.1' apply false
+
+
+
+}
+
+
+//dependencies {
+//    def nav_version = "2.3.0-alpha04"
+//    classpath("androidx.navigation:navigation-safe-args-gradle-plugin:$nav_version")
+//}
+//
+////Top-level build file where you can add configuration options common to all sub-projects/modules.
+//
+//buildscript {
+//    dependencies {
+//        classpath 'com.android.tools.build:gradle:8.3.0'
+//        // Include the Safe Args plugin dependency here
+//        classpath "androidx.navigation:navigation-safe-args-gradle-plugin:2.4.0"
+//    }
+//}
+//
