@@ -5,6 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+<!--    @author Vanessa and Noor-->
+<!--    maze defines the layout for the Maze-->
     <com.example.myapplication.Maze
         android:id="@+id/mazeView"
         android:layout_width="match_parent"
@@ -16,6 +18,7 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0" />
 
+<!--    Fox displayed on the maze-->
     <ImageView
         android:id="@+id/Fox"
         android:layout_width="51dp"
@@ -31,6 +34,7 @@
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/fox_image" />
 
+<!--    Acorn displayed on the maze-->
     <ImageView
         android:id="@+id/Acorn"
         android:layout_width="25dp"

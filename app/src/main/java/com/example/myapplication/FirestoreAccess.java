@@ -1,7 +1,6 @@
 package com.example.myapplication;
 
 import static android.content.ContentValues.TAG; // categorize and identify the source of the log message
-
 import android.util.Log; // output messages to the system log to help with debugging
 
 import androidx.annotation.NonNull; // indicates that a parameter, field, or method return value cannot be null
@@ -23,6 +22,7 @@ import java.util.Map; // represents a collection of key-value pairs
  * database for storing, updating, retrieving, and deleting player
  * email in the leaderboard collection.
  */
+
 public class FirestoreAccess {
 
     /**

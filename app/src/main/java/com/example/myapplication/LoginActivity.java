@@ -1,6 +1,5 @@
 package com.example.myapplication;
 
-import android.content.Intent; // communicate between components of an Android application
 import android.os.Bundle; // used for passing data between activities
 import android.view.View; // represents a basic building block for user interface components
 import android.widget.EditText; // provides a text entry for users to enter text

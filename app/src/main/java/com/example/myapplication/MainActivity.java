@@ -15,6 +15,7 @@ import androidx.appcompat.app.AppCompatActivity; // base class for activities th
  *
  * MainActivity is a subclass of AppCompatActivity
  */
+
 public class MainActivity extends AppCompatActivity {
     /**
      * ImageButton used for navigating to Create Account screen

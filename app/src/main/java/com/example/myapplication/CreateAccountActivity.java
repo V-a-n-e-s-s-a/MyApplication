@@ -9,7 +9,6 @@ import android.widget.Toast; // provides simple feedback about an operation in a
 import androidx.annotation.NonNull; // indicates that a parameter, field, or method return value cannot be null
 import androidx.appcompat.app.AppCompatActivity; // base class for activities that use the support library action bar features
 
-import com.example.myapplication.databinding.ActivityMainBinding;
 import com.google.android.gms.tasks.OnCompleteListener; // listener called when a task completes
 import com.google.android.gms.tasks.Task; // represents an asynchronous operation
 import com.google.firebase.auth.AuthResult; // represents the result os a successful authentication

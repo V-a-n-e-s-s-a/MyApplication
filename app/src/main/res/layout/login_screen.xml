@@ -5,7 +5,6 @@
     android:layout_width="wrap_content"
     android:layout_height="match_parent"
     android:background="@drawable/login_screen">
-
     <!--    @author Vanessa
     login_screen defines the layout for the LoginActivity screen.-->
 

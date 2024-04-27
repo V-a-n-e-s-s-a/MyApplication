@@ -29,6 +29,7 @@ import java.util.List; //  ordered collection of elements
  *
  * LeaderboardActivity is a subclass of AppCompatActivity
  */
+
 public class LeaderboardActivity extends AppCompatActivity {
 
     /**

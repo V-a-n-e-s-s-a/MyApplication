@@ -4,7 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
-
     <!--    @author Vanessa
     leaderboard_contents defines the layout for the -->
     <!--    LeaderboardActivity contents: rank email score-->

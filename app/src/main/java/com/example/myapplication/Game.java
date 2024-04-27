@@ -14,6 +14,7 @@ import com.google.android.gms.tasks.OnSuccessListener; // Listener for task succ
  *
  * Game represents a game instance with a player's email and score.
  */
+
 public class Game {
     /**
      * Player's email

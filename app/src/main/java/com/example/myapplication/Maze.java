@@ -10,7 +10,6 @@ import android.util.AttributeSet; // use of attributes in XML files to customize
 import android.view.MotionEvent; // rovides classes and constants to handle touch events
 import android.view.View; // base class for all views
 
-
 import androidx.annotation.Nullable; // Provides annotations that can be used to indicate that a parameter
 
 import java.util.ArrayList; // Provides the ArrayList class for creating dynamic arrays

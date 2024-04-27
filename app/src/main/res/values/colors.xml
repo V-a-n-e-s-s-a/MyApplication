@@ -15,6 +15,8 @@
     <!--add new color for screen background of fragment_second for Task 9 Step 3-->
     <color name="screenBackground2">#26C6DA</color>
 
+<!--    @author Vanessa-->
+<!--    colors for the login/createaccount EditText-->
     <!--    add color for email, password fields-->
     <color name ="fieldBackground">#B1BD5F</color>
     <!--    add color for field font color-->
