@@ -1,167 +1,97 @@
 package com.example.myapplication;
 
-import android.os.Bundle;
+import android.content.Intent; // communicate between components of an Android application
+import android.os.Bundle; // used for passing data between activities
+import android.view.View; // represents a basic building block for user interface components
+import android.widget.ImageButton; // represents a button with an image that can be clicked
 
-import com.google.android.gms.tasks.OnFailureListener;
-import com.google.android.gms.tasks.OnSuccessListener;
-import com.google.android.material.snackbar.Snackbar;
+import androidx.appcompat.app.AppCompatActivity; // base class for activities that use the support library action bar features
 
-import androidx.appcompat.app.AppCompatActivity;
-
-import android.util.Log;
-import android.view.View;
-
-import androidx.navigation.NavController;
-import androidx.navigation.Navigation;
-import androidx.navigation.ui.AppBarConfiguration;
-import androidx.navigation.ui.NavigationUI;
-
-import com.example.myapplication.databinding.ActivityMainBinding;
-import com.google.firebase.firestore.DocumentReference;
-import com.google.firebase.firestore.FirebaseFirestore;
-
-import android.view.Menu;
-import android.view.MenuItem;
-
-import java.util.HashMap;
-import java.util.Map;
-
+/**
+ * @author Vanessa
+ *
+ * MainActivity is a class used to display the home screen
+ * where player can Login or Create Account.
+ *
+ * MainActivity is a subclass of AppCompatActivity
+ */
 public class MainActivity extends AppCompatActivity {
+    /**
+     * ImageButton used for navigating to Create Account screen
+     */
+    ImageButton createAccountButton;
+    /**
+     * ImageButton used for navigating to Login screen
+     */
+    ImageButton loginButton;
 
-    private AppBarConfiguration appBarConfiguration;
-    private ActivityMainBinding binding;
-
-
-
+    /**
+     * A method that is called when the activity is being created
+     *
+     * @param savedInstanceState If the activity is being re-initialized after
+     *     previously being shut down then this Bundle contains the data it most
+     *     recently supplied in {@link #onSaveInstanceState}.  <b><i>Note: Otherwise it is null.</i></b>
+     *
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        /**
+         * Ensure that the superclass's initialization code is executed
+         * before custom initialization code.
+         */
         super.onCreate(savedInstanceState);
 
-        binding = ActivityMainBinding.inflate(getLayoutInflater());
-        setContentView(binding.getRoot());
+        /**
+         * Initializing variables and setting up any necessary event listeners
+         * In this case home_screen.xml
+         */
+        setContentView(R.layout.home_screen);
 
-        setSupportActionBar(binding.toolbar);
+        /**
+         * Find views by their IDs
+         */
+        loginButton = findViewById(R.id.loginButton);
+        createAccountButton = findViewById(R.id.createAccountButton);
 
-        NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_content_main);
-        appBarConfiguration = new AppBarConfiguration.Builder(navController.getGraph()).build();
-        NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration);
-
-
-
-        binding.fab.setOnClickListener(new View.OnClickListener() {
+        /**
+         * Set click listener for the login button
+         */
+        loginButton.setOnClickListener(new View.OnClickListener() {
+            /**
+             * Click event
+             *
+             * @param v The view that was clicked.
+             */
             @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAnchorView(R.id.fab)
-                        .setAction("Action", null).show();
+            public void onClick(View v) {
+                /**
+                 * Navigates to LoginActivity
+                 */
+                Intent intent = new Intent(MainActivity.this, LoginActivity.class);
+                startActivity(intent);
+                finish(); // Close this activity
             }
         });
-    }
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_main, menu);
-        return true;
-    }
+        /**
+         * Set click listener for the create account button
+         */
+        createAccountButton.setOnClickListener(new View.OnClickListener() {
+            /**
+             * Click event
+             *
+             * @param v The view that was clicked.
+             */
+            @Override
+            public void onClick(View v) {
+                /**
+                 * Navigates to CreateAccountActivity
+                 */
+                Intent intent = new Intent(MainActivity.this, CreateAccountActivity.class);
+                startActivity(intent);
+                finish(); // Close this activity
+            }
+        });
 
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
-
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
-        }
-
-        return super.onOptionsItemSelected(item);
-    }
-
-    @Override
-    public boolean onSupportNavigateUp() {
-        NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_content_main);
-        return NavigationUI.navigateUp(navController, appBarConfiguration)
-                || super.onSupportNavigateUp();
     }
 }
-
-//package com.example.myapplication;
-//
-//import android.os.Bundle;
-//
-//import com.google.android.material.snackbar.Snackbar;
-//
-//import androidx.appcompat.app.AppCompatActivity;
-//
-//import android.view.View;
-//
-//import androidx.navigation.NavController;
-//import androidx.navigation.Navigation;
-//import androidx.navigation.ui.AppBarConfiguration;
-//import androidx.navigation.ui.NavigationUI;
-//
-//import com.example.myapplication.databinding.ActivityMainBinding;
-//
-//import android.view.Menu;
-//import android.view.MenuItem;
-//
-//public class MainActivity extends AppCompatActivity {
-//
-//    private AppBarConfiguration appBarConfiguration;
-//    private ActivityMainBinding binding;
-//
-//    @Override
-//    protected void onCreate(Bundle savedInstanceState) {
-//        super.onCreate(savedInstanceState);
-//
-//        binding = ActivityMainBinding.inflate(getLayoutInflater());
-//        setContentView(binding.getRoot());
-//
-//        setSupportActionBar(binding.toolbar);
-//
-//        NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_content_main);
-//        appBarConfiguration = new AppBarConfiguration.Builder(navController.getGraph()).build();
-//        NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration);
-//
-//        binding.fab.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-//                        .setAnchorView(R.id.fab)
-//                        .setAction("Action", null).show();
-//            }
-//        });
-//    }
-//
-//    @Override
-//    public boolean onCreateOptionsMenu(Menu menu) {
-//        // Inflate the menu; this adds items to the action bar if it is present.
-//        getMenuInflater().inflate(R.menu.menu_main, menu);
-//        return true;
-//    }
-//
-//    @Override
-//    public boolean onOptionsItemSelected(MenuItem item) {
-//        // Handle action bar item clicks here. The action bar will
-//        // automatically handle clicks on the Home/Up button, so long
-//        // as you specify a parent activity in AndroidManifest.xml.
-//        int id = item.getItemId();
-//
-//        //noinspection SimplifiableIfStatement
-//        if (id == R.id.action_settings) {
-//            return true;
-//        }
-//
-//        return super.onOptionsItemSelected(item);
-//    }
-//
-//    @Override
-//    public boolean onSupportNavigateUp() {
-//        NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_content_main);
-//        return NavigationUI.navigateUp(navController, appBarConfiguration)
-//                || super.onSupportNavigateUp();
-//    }
-//}

@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:background="@drawable/login_screen">
+
+    <!--    @author Vanessa
+    login_screen defines the layout for the LoginActivity screen.-->
+
+    <!--    Allows the user to enter username(email address)-->
+    <EditText
+        android:id="@+id/LoginEmailAddress"
+        android:layout_width="400dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="219dp"
+        android:layout_marginTop="170dp"
+        android:layout_marginEnd="302dp"
+        android:autofillHints="@string/email"
+        android:background="@drawable/custom_email_field"
+        android:ems="10"
+        android:fontFamily="sans-serif-medium"
+        android:hint="@string/email"
+        android:inputType="textEmailAddress"
+        android:paddingStart="30dp"
+        android:textColor="@color/fieldFont"
+        android:textColorHint="@color/fieldFont"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.284"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="RtlSymmetry" />
+
+    <!--    Allows the user to enter password-->
+    <EditText
+        android:id="@+id/LoginPassword"
+        android:layout_width="400dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="219dp"
+        android:layout_marginTop="38dp"
+        android:layout_marginEnd="302dp"
+        android:layout_marginBottom="90dp"
+        android:autofillHints="@string/password"
+        android:background="@drawable/custom_email_field"
+        android:ems="10"
+        android:fontFamily="sans-serif-medium"
+        android:hint="@string/password"
+        android:inputType="textPassword"
+        android:paddingStart="30dp"
+        android:textColor="@color/fieldFont"
+        android:textColorHint="@color/fieldFont"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.284"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/LoginEmailAddress"
+        app:layout_constraintVertical_bias="1.0"
+        tools:ignore="RtlSymmetry" />
+
+    <!--    When the user has entered username and password, they can -->
+    <!--    press the Login button to indicate they have finished-->
+    <ImageButton
+        android:id="@+id/LoginButton"
+        android:layout_width="513dp"
+        android:layout_height="127dp"
+        android:layout_marginStart="88dp"
+        android:layout_marginEnd="92dp"
+        android:background="#00000000"
+        android:clickable="true"
+        android:contentDescription="@string/loginbutton"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toTopOf="@+id/LoginEmailAddress"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.29"
+        app:srcCompat="@drawable/login_button" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

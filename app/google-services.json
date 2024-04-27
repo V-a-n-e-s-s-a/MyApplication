@@ -1,13 +1,32 @@
 {
   "project_info": {
-    "project_number": "858551082738",
-    "project_id": "exercise-11-c6f46",
-    "storage_bucket": "exercise-11-c6f46.appspot.com"
+    "project_number": "272292083191",
+    "project_id": "gonuts-4de34",
+    "storage_bucket": "gonuts-4de34.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:858551082738:android:37a917f5a74ef4e49dba6b",
+        "mobilesdk_app_id": "1:272292083191:android:9a5adc236b3fffa56ceaf2",
+        "android_client_info": {
+          "package_name": "com.example.gonuts"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyApD5kDUhN8YUwf8WCgeOlYP58r2sl5j4Q"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:272292083191:android:f6837f14db377a766ceaf2",
         "android_client_info": {
           "package_name": "com.example.myapplication"
         }
@@ -15,7 +34,7 @@
       "oauth_client": [],
       "api_key": [
         {
-          "current_key": "AIzaSyDD2Owcl_ba1J7E3FOvaIQmEnqbZk94jeY"
+          "current_key": "AIzaSyApD5kDUhN8YUwf8WCgeOlYP58r2sl5j4Q"
         }
       ],
       "services": {

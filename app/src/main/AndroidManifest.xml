@@ -13,9 +13,28 @@
         android:theme="@style/Theme.MyApplication"
         tools:targetApi="31">
         <activity
+            android:name=".LoginActivity"
+            android:exported="true"
+            android:theme="@style/Theme.MyApplication"
+            android:screenOrientation="landscape">
+        </activity>
+        <activity
+            android:name=".CreateAccountActivity"
+            android:exported="true"
+            android:theme="@style/Theme.MyApplication"
+            android:screenOrientation="landscape">
+        </activity>
+        <activity
+            android:name=".LeaderboardActivity"
+            android:exported="true"
+            android:theme="@style/Theme.MyApplication"
+            android:screenOrientation="landscape">
+        </activity>
+        <activity
             android:name=".MainActivity"
             android:exported="true"
-            android:theme="@style/Theme.MyApplication">
+            android:theme="@style/Theme.MyApplication"
+            android:screenOrientation="landscape">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

@@ -61,6 +61,17 @@
 
     <!--    extract string resource, set value to R for Task 9 Step 1-->
     <string name="textview_random">R</string>
+    <string name="acorn">acorn</string>
+    <string name="fox">fox</string>
+    <string name="loginbutton">loginbutton</string>
+    <string name="password">Password</string>
+    <string name="email">Email</string>
+    <string name="create_password">Create Password (6 chars)</string>
+    <string name="game_score">gamescore</string>
+    <string name="player_name">playername</string>
+    <string name="rank_number">ranknumber</string>
+    <string name="login_button">loginbutton</string>
+    <string name="create_account_button">createaccountbutton</string>
 </resources>
 
 <!--<resources>-->

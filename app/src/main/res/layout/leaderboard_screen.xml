@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/leaderboard_screen">
+
+    <!--    @author Vanessa
+    leaderboard_screen defines the layout for the LeaderboardActivity screen-->
+
+    <!--    Displays leaderboard contents in a list-->
+    <ListView
+        android:id="@+id/listView"
+        android:layout_width="432dp"
+        android:layout_height="206dp"
+        android:layout_marginStart="149dp"
+        android:layout_marginTop="149dp"
+        android:layout_marginEnd="150dp"
+        android:layout_marginBottom="56dp"
+        android:divider="@color/fieldOutline"
+        android:dividerHeight="4dp"
+        android:drawSelectorOnTop="true"
+        android:background="@drawable/custom_email_field"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintVertical_bias="1"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
